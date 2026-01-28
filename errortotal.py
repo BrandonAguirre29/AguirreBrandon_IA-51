@@ -1,6 +1,7 @@
+import errorvector as evector
 
-from errorvector import e
+ErrorTotal1 = 0
 
-ErrorTotal1 = sum(e * e for e in e)
-
+for i in range(3):
+    ErrorTotal1 = ErrorTotal1 + evector.e[i] * evector.e[i]
 
