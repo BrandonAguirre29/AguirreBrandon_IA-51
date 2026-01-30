@@ -1,12 +1,5 @@
 from values_xwyalpha import X
 from errorvector import e
 
-grad = [0, 0]
+grad = list(map(lambda col: sum(map(lambda fila: X[fila][col] * e[fila], range(len(e)))), range(len(X[0]))))
 
-for j in range(2):          # columnas
-    suma = 0
-    for i in range(3):      # filas
-        suma = suma + X[i][j] * e[i]
-    grad[j] = suma
-
-#print("X^T e =", grad)

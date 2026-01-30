@@ -1,7 +1,5 @@
-import errorvector as evector
+from errorvector import e
 
-ErrorTotal1 = 0
+ErrorTotal1 = sum(map(lambda x: pow(x, 2), e))
 
-for i in range(3):
-    ErrorTotal1 = ErrorTotal1 + evector.e[i] * evector.e[i]
-
+print(ErrorTotal1)

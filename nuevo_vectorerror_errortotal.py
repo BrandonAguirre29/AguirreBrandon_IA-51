@@ -1,14 +1,12 @@
 from nueva_prediccion import y_hat2
 from values_xwyalpha import y
 
-e2 = []
+def resta_e(y, y_hat):
+    return list(map(lambda y, y_hat2: y - y_hat2, y, y_hat2))
 
-for i in range(3):
-    e2.append(y[i] - y_hat2[i])
+e2 = resta_e(y, y_hat2)
 
-ErrorTotal2 = 0
-for i in range(3):
-    ErrorTotal2 = ErrorTotal2 + e2[i] * e2[i]
+ErrorTotal2 = sum(map(lambda x: pow(x, 2), e2))
 
 #print("error nuevo =", e2)
 #print("ErrorTotal2 =", ErrorTotal2)
